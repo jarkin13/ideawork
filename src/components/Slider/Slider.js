@@ -97,10 +97,12 @@ export default class Slider extends Component {
       case "left":
         this.state.active = false;
         this.nextSlide();
+        this.state.active = true;
         break;
       case "right":
         this.state.active = false;
         this.previousSlide();
+        this.state.active = true;
     }
   }
 
