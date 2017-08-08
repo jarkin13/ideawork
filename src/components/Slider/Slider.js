@@ -61,7 +61,7 @@ export default class Slider extends Component {
 
     if( (current != undefined) && (current < background.length - 1) )
       return (
-        <div style={{display: 'none', height:'100%', backgroundImage: `url(${(this.state.background[this.state.current + 1])}.jpg)`}}></div>
+        <div style={{display: 'none', height:'100%', backgroundImage: `url(${(this.state.background[this.state.current + 1])}.jpg)`, transition: '1s'}}></div>
       )
     else
       return null
@@ -97,12 +97,12 @@ export default class Slider extends Component {
       case "left":
         this.state.active = false;
         this.nextSlide();
-        this.state.active = true;
+        //this.state.active = true;
         break;
       case "right":
         this.state.active = false;
         this.previousSlide();
-        this.state.active = true;
+        //this.state.active = false;
     }
   }
 
