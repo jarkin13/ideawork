@@ -9,13 +9,16 @@ export default class Header extends Component {
 
   render() {
     return (
-      <div className="wraper">
-        <nav className="navbar">
+      <nav className="navbar navbar-fixed-top">
+        <div className="wraper">
           <div className="container-fluid">
             <div className="navbar-header">
               <a className="navbar-brand" href="#"><img src={Logo} style={{width: 196, height: 36}} /></a>
+              <button type="button" className="navbar-toggle collapsed" data-toggle="collapse" data-target="#sparta-navbar" aria-expanded="false">
+                <span className="lnr lnr-menu"></span>
+              </button>
             </div>
-            <div className="navbar-collapse collapse pull-right">
+            <div id="sparta-navbar" className="navbar-collapse collapse pull-right">
               <ul className="nav navbar-nav">
                 <li className="nav-item">
                   <a href="#">212.555.5555</a>
@@ -31,8 +34,8 @@ export default class Header extends Component {
               </ul>
             </div>
           </div>
-        </nav>
-      </div>
+        </div>
+      </nav>
     );
   }
 }
