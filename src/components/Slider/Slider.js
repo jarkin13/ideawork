@@ -15,6 +15,7 @@ export default class Slider extends Component {
       background: [],
       current: undefined,
       ready: false,
+      active: true
     }
 
     this.images = [];
@@ -37,10 +38,12 @@ export default class Slider extends Component {
   }
 
   progressSlideshow() {
-    ReactTimerMixin.setTimeout(function () {
-      this.nextSlide();
-      this.progressSlideshow();
-    }.bind(this), this.slideshowDelay);
+    if( this.state.active ) {
+      ReactTimerMixin.setTimeout(function () {
+        this.nextSlide();
+        this.progressSlideshow();
+      }.bind(this), this.slideshowDelay);
+    }
   }
 
   setImageArray(imageArray) {
@@ -92,11 +95,12 @@ export default class Slider extends Component {
   handleSwipe(direction) {
     switch (direction) {
       case "left":
-        this.nextSlide()
+        this.state.active = false;
+        this.nextSlide();
         break;
       case "right":
-        this.previousSlide()
-        break;
+        this.state.active = false;
+        this.previousSlide();
     }
   }
 
