@@ -43,6 +43,12 @@ export default class Slider extends Component {
         this.nextSlide();
         this.progressSlideshow();
       }.bind(this), this.slideshowDelay);
+    } else {
+      clearTimeout(ReactTimerMixin.setTimeout());
+      ReactTimerMixin.setTimeout(function () {
+        this.state.active = true;
+        this.progressSlideshow();
+      }.bind(this), 8000);
     }
   }
 
@@ -97,12 +103,10 @@ export default class Slider extends Component {
       case "left":
         this.state.active = false;
         this.nextSlide();
-        //this.state.active = true;
         break;
       case "right":
         this.state.active = false;
         this.previousSlide();
-        //this.state.active = false;
     }
   }
 
