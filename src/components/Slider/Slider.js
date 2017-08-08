@@ -43,12 +43,6 @@ export default class Slider extends Component {
         this.nextSlide();
         this.progressSlideshow();
       }.bind(this), this.slideshowDelay);
-    } else {
-      clearTimeout(ReactTimerMixin.setTimeout());
-      ReactTimerMixin.setTimeout(function () {
-        this.state.active = true;
-        this.progressSlideshow();
-      }.bind(this), 8000);
     }
   }
 
