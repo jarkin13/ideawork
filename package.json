@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
-    "dev": "webpack-dev-server --hot --inline"
+    "dev": "webpack-dev-server --hot --inline",
+    "postinstall": "webpack -p --config webpack.prod.config.js"
   },
   "author": "Jamie Arkin",
   "license": "ISC",
