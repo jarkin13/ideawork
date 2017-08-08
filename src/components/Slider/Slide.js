@@ -8,8 +8,7 @@ const Slide = (props) => {
       backgroundImage: `url(${current}.jpg)`,
       backgroundRepeat: 'no-repeat',
       backgroundSize: 'cover',
-      backgroundPosition: 'center center',
-      transition: '1s'
+      backgroundPosition: 'center center'
     }
   }
   return <div className="slide" style={styles.imageBackground}></div>
