@@ -1,1 +1,1 @@
-web: webpack -p --config webpack.prod.config.js
+web: node server.js
