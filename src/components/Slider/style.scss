@@ -5,10 +5,41 @@
   position: relative;
   max-width: 1440px;
   margin: 0 auto 30px;
+  color: #fff;
+  font-family: "Caslon Pro";
 
   .slide {
     height: 100%;
     width: 100%;
+    position: relative;
+  }
+
+  .slide-text {
+    position: absolute;
+    left: 9.4444%;
+    bottom: 20.7113402%;
+    width: 65%;
+  }
+
+  h1 {
+    font-family: 'Springville';
+    font-size: 34px;
+    line-height: 34px;
+    margin: 0;
+    padding-bottom: 16px;
+  }
+
+  h2 {
+    font-size: 18px;
+    line-height: 18px;
+    padding-bottom: 16px;
+    margin: 0;
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 22px;
+    margin: 0;
   }
 
   .dotsContainer {
@@ -33,7 +64,29 @@
   }
 
   @media only screen and (min-width: 750px) {
-    height: 580px;
+    height: 582px;
     margin-bottom: 80px;
+
+    h1 {
+      font-size: 60px;
+      line-height: 60px;
+      padding-bottom: 28px;
+    }
+
+    h2 {
+      font-size: 30px;
+      line-height: 30px;
+      padding-bottom: 28px;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 24px;
+    }
+  }
+
+  @media only screen and (min-width: 1200px) { 
+    p { width: 70%; }
+    .slide-text { width: 48%; }
   }
 }

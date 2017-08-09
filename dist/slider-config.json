@@ -1,11 +1,20 @@
 [
   {
-    "image": "slide-1"
+    "image": "slide-1",
+    "title": "Screening:<br> DVF Secret Agent Part 2",
+    "date": "October 15, 2017",
+    "text": "Join us for a private screening of DVF Secret Agent Part 2 with our special guest, director Peter Lindberg."
   },
   {
-    "image": "slide-2"
+    "image": "slide-2",
+    "title": "Screening:<br> DVF Secret Agent Part 3",
+    "date": "October 18, 2017",
+    "text": "Join us for a private screening of DVF Secret Agent Part 3 with our special guest, director Peter Lindberg."
   },
   {
-    "image": "slide-3"
+    "image": "slide-3",
+    "title": "Screening:<br> DVF Secret Agent Part 4",
+    "date": "October 20, 2017",
+    "text": "Join us for a private screening of DVF Secret Agent Part 4 with our special guest, director Peter Lindberg."
   }
 ]

@@ -13,6 +13,9 @@ export default class Slider extends Component {
 
     this.state = {
       background: [],
+      title: [],
+      text: [],
+      date: [],
       current: undefined,
       ready: false,
       active: true
@@ -46,13 +49,28 @@ export default class Slider extends Component {
     }
   }
 
-  setImageArray(imageArray) {
-    let newArray = [];
-    for(let i = 0; i < imageArray.length; i++) {
-      newArray.push(imageArray[i].image);
+  setImageArray(slideArray) {
+    let imagesArray = [];
+    let titleArray = [];
+    let textArray = [];
+    let dateArray = [];
+
+    for(let i = 0; i < slideArray.length; i++) {
+      imagesArray.push(slideArray[i].image);
+      titleArray.push(slideArray[i].title);
+      textArray.push(slideArray[i].text);
+      dateArray.push(slideArray[i].date);
     }
-    this.images = newArray;
-    this.setState({ background: newArray, current: 0, ready: true });
+
+    this.images = imagesArray;
+    this.setState({ 
+      background: imagesArray, 
+      title: titleArray,
+      text: textArray,
+      date: dateArray,
+      current: 0, 
+      ready: true 
+    });
   }
 
   preloadNextImage() {
@@ -113,6 +131,9 @@ export default class Slider extends Component {
             this.state.ready ?
             <Slide
               background={this.state.background}
+              title={this.state.title}
+              text={this.state.text}
+              date={this.state.date}
               current={this.state.current}
               ready={this.state.ready}
             />
